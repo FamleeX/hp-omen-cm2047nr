@@ -14,7 +14,7 @@ I own and use an HP Omen 17 cm2047nr. I forked/updated this for my own use, but 
   - KDE Plasma (Wayland, don't see why it wouldn't work on X11 or XLibre)
 - Kernel Version 7.0.0 [kernel.org](https://www.kernel.org) 
   - mainline version as of writing
-- cat /sys/devices/virtual/dmi/id/board_name = '8BB0'
+- `cat /sys/devices/virtual/dmi/id/board_name` = 8BB0
 
 Currently the patched module is used as a dkms module. Once built, it will override the stock hp-wmi
 in-tree kernel module. So far, I have not noticed any issues day-to-day with this module. Currently,
@@ -42,9 +42,9 @@ The way the P Keys are mapped, this should be good enough in order to bind them 
 
 1. Install dkms and kernel headers 
 
-2. Run 'sudo make install' 
+2. Run `sudo make install` 
 
-3. Then you can 'sudo reboot'
+3. Then you can `sudo reboot`
 
 
 ## GUI app
