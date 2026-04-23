@@ -49,16 +49,16 @@ The way the P Keys are mapped, this should be good enough in order to bind them 
 
 ## GUI app
 Currently the python script is not in the makefile. It will need to be ran as root in order to work.
-Running 'sudo ./omen-keygui.py gui' should work. 'omen-keygui.py listen' lets the app open with an Omen Key press.
-Kernel module will need to be installed.
+Running `sudo ./omen-keygui.py gui` should work. 
+`omen-keygui.py listen` lets the app run in the background and wait for an Omen key press.
 
 Features:
 - Presets of static/solid colors
 - Animations/dynamically changing colors
 - Custom color picker
- - A static color for the 4 zones independently
- - Or one static color for all 4 zones
- - A preview of the color
+  - A static color for the 4 zones independently
+  - Or one static color for all 4 zones
+  - A preview of the color
 
 
 More Information/Reading
