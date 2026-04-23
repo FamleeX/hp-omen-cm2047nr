@@ -156,8 +156,6 @@ sudo rc-service omen-keygui-listener start
 
 ## Notes
 
-- The GUI is not currently integrated into the Makefile  
-- Must be run manually  
 - Requires root access to write to sysfs  
 
 ---
