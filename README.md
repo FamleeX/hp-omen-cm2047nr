@@ -6,7 +6,7 @@ in order to adapt his working usage to newer kernels and to add a gui app.
 
 I own and use an HP Omen 17 cm2047nr. I forked/updated this for my own use, but hopefully someone else can benefit too.
 
-##Device Info
+## Device Info
 
 **HP Omen 17 cm2047nr**
 - Gentoo Linux
@@ -24,7 +24,7 @@ it may work on other kernels/distros.
 There are plans to port this over to other distros and/or init systems where applicable. 
 In my testing I have a python gui script that can modify the led's much easier. 
 
-##What is working with the kernel module
+## What is working with the kernel module
 
 1. HP Omen Key (next to the calculator button on the top right of the keyboard)
 2. Mapped P/Macro Keys as Numpad keys (thanks [xddxdd](https://github.com/xddxdd/hp-omen-linux-module))
@@ -53,9 +53,9 @@ Running 'sudo ./omen-keygui.py gui' should work. 'omen-keygui.py listen' lets th
 Kernel module will need to be installed.
 
 Features:
-1. Presets of static/solid colors
-2. Animations/dynamically changing colors
-3. Custom color picker
+- Presets of static/solid colors
+- Animations/dynamically changing colors
+- Custom color picker
  - A static color for the 4 zones independently
  - Or one static color for all 4 zones
  - A preview of the color
