@@ -133,6 +133,12 @@ sudo ./omen-keygui.py gui
 omen-keygui.py listen
 ```
 
+### Enable the listening service if needed:
+```bash
+sudo rc-update add omen-keygui-listener default
+sudo rc-service omen-keygui-listener start
+``` 
+
 ---
 
 ### Features
