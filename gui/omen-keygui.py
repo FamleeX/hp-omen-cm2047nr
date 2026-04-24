@@ -163,12 +163,9 @@ def hex_to_rgb(color: str) -> tuple[int, int, int]:
 
 def write_zone(zone: str, color: str) -> None:
     path = os.path.join(RGB_BASE, zone)
-    subprocess.run(
-        ["sudo", "tee", path],
-        input=(normalize_hex(color) + "\n").encode(),
-        stdout=subprocess.DEVNULL,
-        check=True,
-    )
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(color.upper() + "\n")
 
 
 

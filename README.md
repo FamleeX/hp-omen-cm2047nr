@@ -121,23 +121,13 @@ sudo reboot
 
 A Python GUI is included for controlling keyboard RGB.
 
-⚠️ **Requires root privileges**
+⚠️ No root privileges required after installation  
+Permissions are handled automatically via a udev rule.
 
 ### Launch GUI
 ```bash
-sudo ./omen-keygui.py gui
+omen-keygui gui
 ```
-
-### Background listener (OMEN key launch)
-```bash
-omen-keygui.py listen
-```
-
-### Enable the listening service if needed:
-```bash
-sudo rc-update add omen-keygui-listener default
-sudo rc-service omen-keygui-listener start
-``` 
 
 ---
 
@@ -156,7 +146,9 @@ sudo rc-service omen-keygui-listener start
 
 ## Notes
 
-- Requires root access to write to sysfs  
+- Root access is not required after installation  
+- Permissions are handled via a udev rule and the `omen` group  
+- Users must be added to the `omen` group and log out/in for changes to take effect  
 
 ---
 

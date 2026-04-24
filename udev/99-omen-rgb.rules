@@ -1,0 +1,3 @@
+SUBSYSTEM=="platform", KERNEL=="hp-wmi", RUN+="/bin/chgrp -R omen /sys/devices/platform/hp-wmi/rgb_zones"
+SUBSYSTEM=="platform", KERNEL=="hp-wmi", RUN+="/bin/chmod 754 /sys/devices/platform/hp-wmi/rgb_zones"
+SUBSYSTEM=="platform", KERNEL=="hp-wmi", RUN+="/bin/chmod 664 /sys/devices/platform/hp-wmi/rgb_zones/zone*"
