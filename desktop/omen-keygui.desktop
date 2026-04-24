@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=OMEN RGB Control
+Comment=Control HP OMEN keyboard RGB lighting
+Exec=omen-keygui gui
+Icon=omen-keygui
+Terminal=false
+Categories=Settings;HardwareSettings;
+Keywords=OMEN;HP;RGB;Keyboard;Lighting;
+StartupNotify=true

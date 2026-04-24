@@ -5,6 +5,8 @@ BINDIR := $(PREFIX)/bin
 
 UDEVDIR := /etc/udev/rules.d
 RGB_GROUP := omen
+DESKTOPDIR := /usr/share/applications
+ICONDIR := /usr/share/pixmaps
 
 DKMS_CONF := dkms.conf
 PACKAGE_NAME := $(shell awk -F= '/^PACKAGE_NAME=/{print $$2}' $(DKMS_CONF))
@@ -19,6 +21,17 @@ install-gui:
 	@echo "Installing GUI"
 	install -d $(BINDIR)
 	install -m 755 gui/omen-keygui.py $(BINDIR)/omen-keygui
+
+	@echo "Installing icon"
+	install -d $(ICONDIR)
+	install -m 644 icons/omen-keygui.png $(ICONDIR)/omen-keygui.png
+
+	@echo "Installing desktop entry"
+	install -d $(DESKTOPDIR)
+	install -m 644 desktop/omen-keygui.desktop $(DESKTOPDIR)/omen-keygui.desktop
+
+	@echo "Refreshing desktop database"
+	-kbuildsycoca6 >/dev/null 2>&1 || true
 
 install-udev:
 	@echo "Creating RGB access group if needed"
@@ -45,6 +58,11 @@ uninstall-module:
 uninstall-gui:
 	@echo "Uninstalling GUI"
 	rm -f $(BINDIR)/omen-keygui
+	rm -f $(DESKTOPDIR)/omen-keygui.desktop
+	rm -f $(ICONDIR)/omen-keygui.png
+	
+	@echo "Refreshing desktop database"
+	-kbuildsycoca6 >/dev/null 2>&1 || true
 
 uninstall-udev:
 	@echo "Uninstalling udev rule"
